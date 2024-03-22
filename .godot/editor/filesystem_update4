@@ -6,3 +6,8 @@ res://Scenes/Utility/hurtbox.tscn
 res://Scenes/Utility/enemy_spawner.tscn
 res://Scenes/Player/Attacks/ice_spear_attack.tscn
 res://Scenes/Player/Attacks/ice_spear_attack.gd
+res://Scenes/Utility/hurtbox.gd
+res://Scenes/Enemy/enemy.gd
+res://Scenes/Player/player.gd
+res://Scenes/Enemy/explosion.tscn
+res://Scenes/Enemy/explosion.gd

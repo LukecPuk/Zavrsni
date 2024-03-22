@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cehleaactojeq"]
+[gd_scene load_steps=12 format=3 uid="uid://cehleaactojeq"]
 
 [ext_resource type="Texture2D" uid="uid://cgpubhrp2jr3j" path="res://Textures/Enemy/kolbold_weak.png" id="1_03w71"]
 [ext_resource type="Script" path="res://Scenes/Enemy/enemy.gd" id="1_wx2li"]
 [ext_resource type="PackedScene" uid="uid://u0xb10jbvnx5" path="res://Scenes/Utility/hurtbox.tscn" id="3_lnnmb"]
 [ext_resource type="PackedScene" uid="uid://dkhsx6uxkr85p" path="res://Scenes/Utility/hitbox.tscn" id="4_q8jnh"]
+[ext_resource type="AudioStream" uid="uid://cjgg4ml6wbnie" path="res://Audio/SoundEffect/enemy_hit.ogg" id="5_w1xw5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct4q4"]
 radius = 6.0
@@ -74,6 +75,7 @@ libraries = {
 [node name="Hurtbox" parent="." instance=ExtResource("3_lnnmb")]
 collision_layer = 4
 collision_mask = 4
+HurtboxType = 1
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(1.25, 3)
@@ -86,6 +88,11 @@ collision_mask = 2
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(2, 3.75)
 shape = SubResource("RectangleShape2D_7fjkw")
+
+[node name="Sound_Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_w1xw5")
+volume_db = -20.0
+pitch_scale = 1.5
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
 

@@ -55,7 +55,7 @@ func attack():
 		if iceSpearTimer.is_stopped():
 			iceSpearTimer.start()
 
-func _on_hurtbox_hurt(damage):
+func _on_hurtbox_hurt(damage, _angle, _knockback):
 	health -= damage
 
 

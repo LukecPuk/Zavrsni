@@ -1,0 +1,8 @@
+res://Scenes/World/world.tscn
+res://Scenes/Player/player.tscn
+res://Scenes/Enemy/enemy.tscn
+res://Scenes/Utility/hitbox.tscn
+res://Scenes/Utility/hurtbox.tscn
+res://Scenes/Utility/enemy_spawner.tscn
+res://Scenes/Player/Attacks/ice_spear_attack.tscn
+res://Scenes/Player/Attacks/ice_spear_attack.gd
